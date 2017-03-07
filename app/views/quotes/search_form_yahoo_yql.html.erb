@@ -1,0 +1,17 @@
+<br><br><br>
+<div id="search1" class="container">
+  <div class="row"><center>
+    <br><br><br>
+    <h3>Search Ticker</h3>
+    <br><br><br><br>
+    <%= form_tag("/quotes", method: "post") do %>
+      <%= label_tag(:get_quote) %>
+      <%= text_field_tag(:get_quote) %>
+
+      <%= submit_tag("Submit") %>
+    <% end %>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STOCK'EM</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fanwood+Text|Fugaz+One|Molengo|Oleo+Script|Unica+One|Raleway" rel="stylesheet">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+    <nav id="nav1">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="/" class="blogo left ">STOCK'EM</a>
+          <div id="nav-mobile" class="right">
+            <% if (user_signed_in?) %>
+            <a href="/company_search">SEARCH</a> |
+            <%= link_to 'PROFILE', current_user %> |
+            <%= link_to 'SIGN OUT',  { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete  %>
+
+            <% else %>
+            <%= link_to 'SIGN IN', new_user_session_path %>
+            <%= link_to 'SIGN UP', new_user_registration_path %>
+            <% end %>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+    <%= yield %>
+
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Stock'EM</h5>
+              <p class="grey-text text-lighten-4">We Strive to Keep you informed on the Market</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">CHECK THIS OUT</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="https://github.com/kimm9">MY GITHUB</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://my-portfolio-mattkim712.herokuapp.com">MY PORTFOLIO</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2017 Copyright Text
+
+          </div>
+        </div>
+      </footer>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+  </body>
+</html>

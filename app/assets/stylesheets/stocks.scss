@@ -1,0 +1,30 @@
+// Place all the styles related to the Stocks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body { font: 20px Arial;}
+path {
+    stroke: #11999E;
+    stroke-width: 1;
+    fill: none;
+}
+text.shadow {
+    stroke: white;
+    stroke-width: 2.5px;
+    opacity: 0.9;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+svg {
+  margin-left: 100px;
+
+}
+
+.his {
+  font-family: 'Fanwood Text', cursive;
+}

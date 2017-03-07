@@ -1,0 +1,68 @@
+
+
+
+<div class="container">
+  <div class="portrow row">
+    <h3><center><%= @portfolio.title %></h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Ticker</th>
+            <th>Current Price</th>
+            <th>Price Change</th>
+            <th>Percent Change</th>
+            <th>Day's Low</th>
+            <th>Day's High</th>
+            <th>Year High</th>
+            <th>Year Low</th>
+          </tr>
+        </thead>
+        <% @called_stocks_arr.each do |stock| %>
+        <tbody>
+          <td><%= stock.name %></td>
+          <td><%= stock.symbol %></td>
+          <td>$<%= stock.ask %></td>
+          <td>$<%= stock.change %></td>
+          <td><%= stock.changein_percent %></td>
+          <td>$<%= stock.days_high %></td>
+          <td>$<%= stock.days_low %></td>
+          <td>$<%= stock.year_high %></td>
+          <td>$<%= stock.year_low %></td>
+        </tbody>
+        <% end  %>
+
+      </table>
+      <hr>
+      <div class="portrow row">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Ticker</th>
+              <th>View</th>
+            </tr>
+          </thead>
+          <% @stocks_arr.each do |entry| %>
+          <tbody>
+            <td><%= entry.company_name %></td>
+            <td><%= entry.ticker %></td>
+            <td><%= link_to ("view"), stock_path(entry.id) %></td>
+            <td><%= link_to 'delete',  { action: :destroy, id: stock_path(entry.id) }, method: :delete %> <br><br></td>
+          </tbody>
+          <% end  %>
+        </table>
+
+      </div>
+
+  </div>
+  <div class="portrow row">
+    <br><br>
+    <ul class="collection with-header">
+      <li class="collection-header"><h4><center>Current News Feed for <%= @portfolio.title %></h4></li>
+        <% @new_entries.each do |feed| %>
+        <li class="collection-item"> <%= feed.title%> | <%= feed.published %> | <%= link_to "View", feed.url %></li>
+        <% end  %>
+      </ul>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  ticker: MyString
+  quote: 1.5
+  price_change: 1.5
+  percentage_change: 1.5
+
+two:
+  company_name: MyString
+  ticker: MyString
+  quote: 1.5
+  price_change: 1.5
+  percentage_change: 1.5

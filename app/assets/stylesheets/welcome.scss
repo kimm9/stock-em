@@ -1,0 +1,91 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+}
+
+svg {
+  display: block;
+}
+
+.row1 {
+  background: url('https://static.pexels.com/photos/41301/business-cash-coin-concept-41301.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: 5px 5px;
+  background-size: cover;
+  height: 890px;
+  color: black;
+  font-family: 'Raleway';
+  margin-bottom: 0;
+}
+
+.row1logo {
+  margin-top: 0px;
+  font-size: 80px;
+  font-family: 'Unica One', cursive;
+  color: #939384;
+}
+
+.rowimg1 {
+    width: 350px;
+    height: 350px;
+
+}
+
+h2{
+  font-family: 'Raleway', cursive;
+}
+
+h3 {
+  font-family: 'Fanwood Text', cursive;
+}
+
+
+.rowimg2 {
+    width: 600px;
+}
+
+
+
+.row1p {
+    font-size: 40px;
+    font-family: 'Oleo Script', cursive;
+    color: #939384;
+}
+
+nav{
+    box-shadow: none;
+    background-color: white;
+    font-family: 'Raleway', cursive;
+  a{
+
+  color: #11999E;
+}
+div a.blogo{
+  color: #11999E;
+  background-color: white;
+  font-size: 40px;
+  font-family: 'Fugaz One', cursive;
+}
+}
+
+.ptag {
+  font-size: 25px;
+  font-family: 'Raleway';
+}
+
+footer.page-footer {
+  background-color:#3C3C3C;
+  color: #11999E;
+  margin-top: 122px;
+}
+
+#nav-mobile {
+  font-size: 20px;
+}
+
+#search1 {
+  margin-bottom: 310px;
+}

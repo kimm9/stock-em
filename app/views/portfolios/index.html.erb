@@ -1,0 +1,12 @@
+
+
+  <div class="container">
+    <div class="row">
+      <ul class="collection with-header">
+        <li class="collection-header"><h4><%= @user.email %>'s Portfolios</h4></li>
+        <% @portfolios.each do |entry| %>
+        <li class="collection-item"> <%= entry.title %> | <%= link_to ("VIEW"), portfolio_path(entry.id) %> <br> <%= entry.updated_at %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>

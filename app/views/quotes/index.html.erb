@@ -1,0 +1,60 @@
+<div id="search1" class="container"><center>
+  <br><br><br><br>
+  <h2>Search Results</h2>
+
+  <table>
+    <thead>
+      <tr>
+
+        <th>Company</th>
+        <th>Ticker</th>
+        <th>Current Price</th>
+        <th>Price Change</th>
+        <th>Percent Change</th>
+        <th>Day's Low</th>
+        <th>Day's High</th>
+        <th>Year High</th>
+        <th>Year Low</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @company_name %></td>
+        <td><%= @stock.symbol %></td>
+        <td>$<%= @stock.ask %></td>
+        <td>$<%= @stock.change %></td>
+        <td><%= @stock.changein_percent %></td>
+        <td>$<%= @stock.days_low %></td>
+        <td>$<%= @stock.days_high %></td>
+        <td>$<%= @stock.year_high %></td>
+        <td>$<%= @stock.year_low %></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <br><br>
+
+
+
+
+  <%= form_for Stock.new do |f| %>
+
+
+
+  <%= f.hidden_field :company_name, :value => @company_name %> <br>
+
+
+  <%= f.hidden_field :ticker, :value => @stock.symbol%> <br>
+
+
+  <h5>Add Stock To Portfolio</h5>
+
+  <%= f.label :portfolios%>
+  <%= f.collection_select :portfolios, @portfolios, :id, :title %>
+
+  <%= f.submit %>
+  <% end %>
+
+
+</div>
