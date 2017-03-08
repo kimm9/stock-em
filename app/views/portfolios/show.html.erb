@@ -48,7 +48,6 @@
             <td><%= entry.company_name %></td>
             <td><%= entry.ticker %></td>
             <td><%= link_to ("view"), stock_path(entry.id) %></td>
-            <td><%= link_to 'delete',  { action: :destroy, id: stock_path(entry.id) }, method: :delete %> <br><br></td>
           </tbody>
           <% end  %>
         </table>

@@ -80,11 +80,6 @@ class PortfoliosController < ApplicationController
   end
 
 
-  def destroy
-    Portfolio.delete(params[:id])
-    redirect_to url_for(:controller => :portfolios, :action => :show)
-  end
-
 
 
 
