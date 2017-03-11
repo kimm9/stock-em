@@ -48,7 +48,7 @@
             <td><%= entry.company_name %></td>
             <td><%= entry.ticker %></td>
             <td><%= link_to ("view"), stock_path(entry.id) %></td>
-            <td><%= link_to 'delete',  { action: :destroy, id: entry.id, port_id: @portfolio.id }, method: :delete %></td>
+            <td><%= link_to 'delete', stock, { action: :destroy, id: entry.id, port_id: @portfolio.id }, method: :delete %></td>
 
           </tbody>
           <% end  %>
