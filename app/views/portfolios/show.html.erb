@@ -47,7 +47,7 @@
           <tbody>
             <td><%= entry.company_name %></td>
             <td><%= entry.ticker %></td>
-            <td><%= link_to ("view"), stock_path(entry.id) %></td>
+            <td><%= link_to '<button type="button">View</button>'.html_safe,, stock_path(entry.id) %></td>
             <td>
               <%= form_for entry, method: :delete do |f|  %>
                 <%= f.hidden_field(:port_id, :value => @portfolio.id) %>
