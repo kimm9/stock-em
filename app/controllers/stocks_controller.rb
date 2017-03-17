@@ -58,10 +58,10 @@ class StocksController < ApplicationController
 
   def destroy
     puts 'hello fizal'
-    @portfolio = Portfolio.find(params[:port_id])
-    @portStock = @portfolio.stocks.find(params[:id])
+    @portStock = Stock.find(params[:id])
+    @portfolio = Portfolio.find(params[:stock][:port_id])
     @portStock.destroy
-    redirect_to "/portfolio/" + @portfolio.id
+    redirect_to "/portfolios/" + @portfolio.id.to_s
   end
 
 end
