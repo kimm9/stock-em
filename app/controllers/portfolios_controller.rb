@@ -53,7 +53,7 @@ class PortfoliosController < ApplicationController
     @called_feeds_arr = []
 
     @stocks_arr.first(3).each do |stock|
-      @called_feeds_arr.push(instance_variable_set("@feed_#{i += 1}", Feedjira::Feed.fetch_and_parse("http://finance.yahoo.com/rss/headline?s=#{stock.ticker}")))
+      @called_feeds_arr.push(instance_variable_set("@feed_#{i += 1}", Feedjira::Feed.fetch_and_parse("http://finance.yahoo.com/rss/industry?s=#{stock.ticker}")))
     end
 
 
