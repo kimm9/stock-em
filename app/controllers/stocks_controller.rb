@@ -57,7 +57,7 @@ class StocksController < ApplicationController
 
 
   def destroy
-    puts 'hello fizal'
+    
     @portStock = Stock.find(params[:id])
     @portfolio = Portfolio.find(params[:stock][:port_id])
     @portStock.destroy

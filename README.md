@@ -1,5 +1,7 @@
+
 # STOCK'EM (APP OVERVIEW)
 
+## API is discontinued and the application is now on work in progress
 
 Forecasting risk in stock trading is truly important for Stock Investors, potential investors, and everyone who is interested in stocks. If you have invested in stocks should always look for the ways how to detect sudden price changes and take immediate actions to protect your investments.
 For that reason, we have created an application that informs users real-time stock data in order to increase awareness on price changes. After registration, users can create as many portfolios as they want and add as many stocks to these portfolios.
